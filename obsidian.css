@@ -100,7 +100,10 @@
 .cm-s-obsidian span.cm-formatting-code,
 .cm-s-obsidian span.cm-formatting-quote,
 .cm-s-obsidian span.cm-formatting-list,
-.cm-s-obsidian span.cm-hr {
+.cm-s-obsidian span.cm-hr,
+.cm-s-obsidian span.cm-tag,
+.cm-s-obsidian span.cm-attribute,
+.cm-s-obsidian span.cm-string {
   color: var(--operators);
 }
 
