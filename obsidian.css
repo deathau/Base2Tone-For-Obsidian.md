@@ -132,7 +132,6 @@ pre code {
 
 /* blockquote */
 .CodeMirror-wrap pre.CodeMirror-line.HyperMD-quote {
-  background-color: var(--background-primary-alt);
   border-color: var(--background-secondary);
   border-width: 1px;
   border-left-width: 5px;
