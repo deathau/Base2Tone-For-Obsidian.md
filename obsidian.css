@@ -73,6 +73,12 @@
   --interactive-accent: var(--baseD0);
   --interactive-accent-rgb: var(--D0-rgb); /* 🤔 */
   --interactive-accent-hover: var(--baseD1);
+
+  --operators: var(--baseC0);
+  --link-external: var(--baseD4);
+  --link-internal: var(--baseD0);
+  --inline-code: var(--baseD0);
+  --bullet: var(--baseD0);
 }
 
 /* now, the fun stuff */
@@ -93,8 +99,9 @@
 .cm-s-obsidian span.cm-inline-code.cm-formatting-code,
 .cm-s-obsidian span.cm-formatting-code,
 .cm-s-obsidian span.cm-formatting-quote,
+.cm-s-obsidian span.cm-formatting-list,
 .cm-s-obsidian span.cm-hr {
-  color: var(--baseC0);
+  color: var(--operators);
 }
 
 /* external links */
@@ -103,7 +110,7 @@
 .cm-s-obsidian span.cm-link:not(.cm-formatting),
 .cm-s-obsidian span.cm-url,
 a {
-  color: var(--baseD4);
+  color: var(--link-external);
 }
 
 /* internal links */
@@ -111,13 +118,13 @@ a {
 .cm-s-obsidian span.cm-hmd-internal-link,
 a.internal-link,
 a.tag {
-  color: var(--baseD0);
+  color: var(--link-internal);
 }
 
 /* code */
 .cm-s-obsidian span.cm-inline-code,
 code {
-  color: var(--baseD0);
+  color: var(--inline-code);
 }
 pre code {
   color: var(--text-normal);
@@ -126,7 +133,8 @@ pre code {
 /* blockquote */
 .CodeMirror-wrap pre.CodeMirror-line.HyperMD-quote {
   background-color: var(--background-primary-alt);
-  border-color: var(--background-secondary);border-width: 1px;
+  border-color: var(--background-secondary);
+  border-width: 1px;
   border-left-width: 5px;
   border-style: solid;
 }
@@ -151,10 +159,10 @@ pre code {
 
 /* stikethrough */
 .cm-strikethrough, s {
-  text-decoration-color: var(--baseC0);
+  text-decoration-color: var(--operators);
 }
 .cm-strikethrough:not(.cm-formatting), s {
-  color: var(--baseC4);
+  color: var(--operators);
 }
 
 /* fixes for highlight */
@@ -164,20 +172,17 @@ pre code {
   color: var(--background-primary);
 }
 .cm-s-obsidian span.cm-formatting-highlight {
-  color: var(--baseC0);
+  color: var(--operators);
 }
 
 /* bullet lists */
-.cm-s-obsidian span.cm-formatting-list {
-  color: var(--baseD0);
-}
 .cm-s-obsidian span.cm-formatting-list-ul {
   font-weight: bold;
 }
 ul {list-style: none}
 ul li:not(.task-list-item)::before {
   content: "•"; /* 🤔 need to think of some better bullet chars */
-  color: var(--baseD0);
+  color: var(--bullet);
   display: inline-block;
   width: 1em;
   margin-left: -1em;
@@ -201,7 +206,7 @@ ul ol > li:not(.task-list-item)::before,
 ul ul ol > li:not(.task-list-item)::before,
 ul ul ul ol > li:not(.task-list-item)::before {
   content: "." counter(li);
-  color: var(--baseD0);
+  color: var(--bullet);
   font-weight:normal;
   display: inline-block;
   width: 1em;
@@ -216,5 +221,5 @@ ul ul ul ol > li:not(.task-list-item)::before {
 
 /* task lists */
 .cm-s-obsidian span.cm-formatting-task {
-  color: var(--baseB0);
+  color: var(--bullet);
 }
