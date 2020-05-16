@@ -7,12 +7,12 @@
 
 :root {
   /* change these hues for an entirely new look */
-  --uno: 231;
-  --duo: 9;
+  --uno: 260;
+  --duo: 28;
   /* this is a hack workaround for now */
   /* go to https://convertacolor.com/ to convert the --baseD0 hsl to rgb */
   /* i.e. hsl(--duo, 58%, 55%) */
-  --D0-rgb: 207,94,74;
+  --D0-rgb: 207,136,74;
 
   /* then fiddle with the saturation and lightness values */
   --baseA0: hsl(var(--uno), 18%, 17%);
