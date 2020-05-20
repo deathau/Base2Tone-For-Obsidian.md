@@ -157,6 +157,7 @@ a.tag {
 
 /* code */
 .cm-s-obsidian span.cm-inline-code,
+.markdown-preview-view code,
 code {
   color: var(--inline-code);
 }
