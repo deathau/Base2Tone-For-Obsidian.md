@@ -222,7 +222,7 @@ pre code, .cm-s-obsidian pre.HyperMD-codeblock {
 .cm-s-obsidian span.cm-formatting-list-ul {
   font-weight: bold;
 }
-ul { list-style: none; }
+ul { list-style: none !important; }
 
 li > p {
   display: inline-block;
